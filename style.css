@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Fira Code', monospace;
+  background: #111;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+body.light {
+  background: #f0f0f0;
+  color: #111;
+}
+
+.card {
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+body.light .card {
+  background: #fff;
+  box-shadow: 0 0 20px #0a0;
+}
+
+h1 {
+  margin: 0 0 1rem;
+}
+
+.password-box {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#password {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: #333;
+  color: #0f0;
+}
+
+#copy-btn {
+  background: #00ff00;
+  border: none;
+  cursor: pointer;
+  padding: 0 1rem;
+  color: #111;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #444;
+  margin: 1rem 0;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.length {
+  margin: 1rem 0;
+}
+
+#length-number {
+  width: 50px;
+  margin-left: 0.5rem;
+}
+
+#length-range {
+  width: 100%;
+}
+
+#generate-btn {
+  background: #00ff00;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #111;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 50px;
+  inset: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.theme-toggle input:checked + .slider {
+  background: #00ff00;
+}
+
+.theme-toggle input:checked + .slider::before {
+  transform: translateX(26px);
+}
